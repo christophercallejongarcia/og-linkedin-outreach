@@ -1,0 +1,12 @@
+{
+  "title": "Beispielpaket vor Verwendung ersetzen",
+  "sender": "Eigenes LinkedIn-Konto",
+  "items": [
+    {
+      "contact_id": "ID_AUS_KONTAKTBEFEHL",
+      "kind": "connect",
+      "subject": "",
+      "text": ""
+    }
+  ]
+}
