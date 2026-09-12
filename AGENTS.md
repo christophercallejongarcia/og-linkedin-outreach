@@ -1,6 +1,6 @@
 # OG Outreach: Arbeitsregeln
 
-Dieses Repo ist ein eigenständiger Arbeitsbereich. Lies zuerst `agent.json`, danach `workflows/start.md`. Antworte auf Deutsch. Verwende nur den hier konfigurierten Kanal und die tatsächlichen Werkzeuge der laufenden Sitzung.
+Dieses Repo ist ein eigenständiger Arbeitsbereich. Lies zuerst `agent.json`, danach den angefragten nativen Skill unter `.claude/skills/` beziehungsweise `.agents/skills/`. Antworte auf Deutsch. Verwende nur den hier konfigurierten Kanal und die tatsächlichen Werkzeuge der laufenden Sitzung.
 
 ## Auftrag und Daten
 
@@ -21,3 +21,7 @@ Antworten vor Nachfassaktionen aktualisieren. Ein Widerspruch oder Abmeldewunsch
 Lies `docs/werkzeuge.md` und die Einrichtungsanleitung deiner Laufzeit. Prüfe Tool-Namen und Eingabeschema im tatsächlichen Inventar. Kein erfundenes MCP-Kommando. Kein automatischer Anbieterwechsel, der Nutzerdaten an einen neuen Dienst überträgt. Lass Nutzer Login, OAuth und CAPTCHA selbst abschließen. Geheimnisse nicht in Chats, öffentliche Dateien oder Prozessausgaben schreiben.
 
 Die Skripte verwalten lokale Daten; Browser und Mailanbieter werden von der laufenden Agentenumgebung bedient. Das ist keine technische Sperre für alle externen Tools: Die obigen Regeln müssen bei deren Verwendung eingehalten werden. Bei fehlender Anbindung den konkreten Einrichtungsschritt nennen, ohne erfolgreiche Verbindung zu behaupten.
+
+## Native Skills
+
+Jeder Fachskill enthält einen eigenen vollständigen Ablauf. Die README listet die Aufrufe. Starte bei fehlendem Profil mit `og-linkedin-setup`. Bestehende `workflows/`-Dateien bleiben ergänzende Detaildokumentation; sie ersetzen keinen Skill.

@@ -1,22 +1,31 @@
 ---
 name: og-linkedin-outreach
-description: "LinkedIn-Kontakte recherchieren, Kommentare und Kontaktaufnahmen vorbereiten und freigegebene Browseraktionen ausführen. Für dieses eigenständige OG-Projekt mit lokalem Kontaktregister."
+description: "Einrichtung und passende einzelne LinkedIn-Skills auswählen; bei einem konkreten Auftrag den zutreffenden Skill vollständig ausführen."
 ---
 
-# og-linkedin-outreach
+# LinkedIn-Outreach starten
 
-Finde die Projektwurzel anhand von agent.json mit name `og-linkedin-outreach`. Fehlt sie, bitte den Nutzer, dieses Repo als Arbeitsordner zu öffnen. Kein anderes Register verwenden.
+## Projekt und erster Aufruf
 
-Lies AGENTS.md und workflows/start.md relativ zur Projektwurzel. Bei fehlendem Nutzerprofil workflows/einrichtung.md. Verwende scripts/agent.py für sämtliche Register- und Freigabeschritte.
+Dieser Skill gehört zu `og-linkedin-outreach`. Wenn neben dieser SKILL.md eine `PROJECT_ROOT`-Datei liegt, lies daraus den gebundenen Projektpfad. Sonst liegt die Projektwurzel drei Verzeichnisse über diesem Skill-Ordner. Prüfe dort `agent.json` auf den Namen `og-linkedin-outreach`; verwende kein anderes Kontaktregister. Alle folgenden Projektpfade sind relativ zu dieser geprüften Wurzel, alle Shell-Befehle laufen dort.
 
-## Aufgabenwahl
+Lies `AGENTS.md`, Nutzerprofil und Registerstand. Fehlt `data/profil.json`, führe zuerst `og-linkedin-setup` aus. Der vollständige Kanalablauf dieses Skills steht unten. Gemeinsame Registerbefehle und Freigaben stehen in [references/register-und-freigabe.md](references/register-und-freigabe.md); vor Kontaktänderungen oder externen Aktionen lesen. Werkzeugzugänge werden bei Bedarf anhand `docs/werkzeuge.md` geprüft.
 
-- recherche: `workflows/recherche.md`
-- kontakte: `workflows/kontakte.md`
-- interaktionen: `workflows/interaktionen.md`
-- inbox: `workflows/inbox.md`
-- content: `workflows/content.md`
-- Paket prüfen und ausführen: `workflows/paketfreigabe.md`.
-- Nächste Schritte und Neustart: `workflows/nachverfolgung.md`.
+## Auftrag zuordnen
 
-Lies nur die relevanten Dateien. Prüfe vorhandene Tool-Fähigkeiten und benutze die tatsächlichen Schemata. Vorbereitung ist keine Freigabe zum Senden. Nach expliziter Paketfreigabe reserviere jeden Eintrag mit claim, führe ihn einmal extern aus und dokumentiere das belegte Ergebnis mit record.
+Bei erstem Start `og-linkedin-setup` ausführen. Bei konkretem Auftrag den passenden einzelnen Skill unter `.claude/skills/` oder `.agents/skills/` lesen und ausführen. Diese Dateien enthalten jeweils den vollständigen Ablauf.
+
+- `og-linkedin`: Profile recherchieren, Kontakte suchen, Nachrichten und Benachrichtigungen lesen oder freigegebene LinkedIn-Aktionen ausführen.
+- `og-linkedin-connect`: Eine konkrete Liste von LinkedIn-Profilen mit geprüften Notizen zur Vernetzung vorbereiten und nach Paketfreigabe im Browser ausführen.
+- `og-lead-borrow`: Kommentierende und reagierende Personen eines fremden LinkedIn-Beitrags recherchieren, nach eigener Zielgruppe qualifizieren und Kontaktentwürfe vorbereiten.
+- `og-leadthunder`: Kommentierende eines LinkedIn-Beitrags direkt über die verfügbare Browseransicht erfassen und eine personalisierte Vernetzungskampagne vorbereiten.
+- `og-daily-icp-feed`: Aktuelle LinkedIn-Beiträge zur eigenen Zielgruppe sammeln, bewerten und konkrete Kommentarentwürfe als prüfbare Auswahl liefern.
+- `og-qualify-audience`: Personen aus Kommentaren und Reaktionen auf eigene LinkedIn-Beiträge nach den eigenen Kundenkriterien bewerten.
+- `og-content-reflect`: Eigene Beiträge anhand verfügbarer Inhalts- und Leistungsdaten vergleichen und daraus konkrete nächste Themen ableiten.
+- `og-content-compare`: Ausgewählte LinkedIn-Profile und Beiträge auf Themen, Formate, sichtbare Resonanz und passende eigene Themenansätze untersuchen.
+- `og-content-source`: Aktuelle Branchen- oder KI-Geschichten mit Quellen finden und daraus einen eigenen deutschen Postentwurf samt Bildbriefing entwickeln.
+- `og-linkedin-signal-monitor`: Finanzierungs-, Stellen-, Beitrags- oder Bewertungssignale zur eigenen Zielgruppe recherchieren und begründete Kontaktentwürfe vorbereiten.
+- `og-linkedin-autoresearch`: Vorhandene Kampagnendaten auswerten, eine Text- oder Zielgruppenhypothese testen und Varianten nachvollziehbar vergleichen.
+- `og-linkedin-agent-teams`: Einen beauftragten Outreach-Arbeitsauftrag in konkrete Teilaufgaben mit Zuständigkeiten, Übergaben und optionaler Wiederholung übersetzen.
+- `og-linkedin-apify-skills`: Passende Apify-Actors für Leadquellen, Beiträge, Wettbewerber oder Signale auswählen, lesend testen und Ergebnisse in die Kontaktarbeit übernehmen.
+- `og-linkedin-deck`: Eine deutschsprachige Präsentation zu einem konkreten Angebot oder Kundengespräch erstellen und bei vorhandenem Renderer als PDF ausgeben.

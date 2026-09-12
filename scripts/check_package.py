@@ -21,6 +21,13 @@ for path in root.rglob('*.md'):
         if not (root / route).is_file(): errors.append('Route fehlt: ' + route)
 for path in (root / 'templates').glob('*.json'): json.loads(path.read_text())
 for path in (root / 'scripts').glob('*.py'): ast.parse(path.read_text())
+manifest = json.loads((root / 'skills-manifest.json').read_text())
+for name in manifest['skills']:
+    a = root / '.agents/skills' / name / 'SKILL.md'
+    b = root / '.claude/skills' / name / 'SKILL.md'
+    if not a.exists() or not b.exists() or a.read_bytes() != b.read_bytes(): errors.append('Fachskill fehlt oder weicht ab: ' + name)
+    for runtime in ['.agents', '.claude']:
+        if not (root / runtime / 'skills' / name / 'references/register-und-freigabe.md').exists(): errors.append('Skill-Referenz fehlt: ' + name)
 if errors:
     raise SystemExit('\n'.join(errors))
-print('Paketstruktur, Skill-Einstiege, Verweise, JSON und Python-Syntax geprüft: ' + name)
+print('Paketstruktur, Skill-Einstiege, Verweise, JSON und Python-Syntax geprüft: ' + manifest['project'])

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "project": "og-linkedin-outreach",
+  "skills": [
+    "og-content-compare",
+    "og-content-reflect",
+    "og-content-source",
+    "og-daily-icp-feed",
+    "og-lead-borrow",
+    "og-leadthunder",
+    "og-linkedin",
+    "og-linkedin-agent-teams",
+    "og-linkedin-apify-skills",
+    "og-linkedin-autoresearch",
+    "og-linkedin-connect",
+    "og-linkedin-deck",
+    "og-linkedin-outreach",
+    "og-linkedin-setup",
+    "og-linkedin-signal-monitor",
+    "og-qualify-audience"
+  ],
+  "source_mapping": {
+    "linkedin.md": "og-linkedin",
+    "linkedin-connect.md": "og-linkedin-connect",
+    "lead-borrow.md": "og-lead-borrow",
+    "leadthunder.md": "og-leadthunder",
+    "daily-icp-feed.md": "og-daily-icp-feed",
+    "qualify-audience.md": "og-qualify-audience",
+    "content-reflect.md": "og-content-reflect",
+    "content-compare.md": "og-content-compare",
+    "content-source.md": "og-content-source",
+    "signal-monitor.md": "og-linkedin-signal-monitor",
+    "autoresearch.md": "og-linkedin-autoresearch",
+    "agent-teams.md": "og-linkedin-agent-teams",
+    "apify-skills.md": "og-linkedin-apify-skills",
+    "deck.md": "og-linkedin-deck"
+  }
+}

@@ -32,7 +32,41 @@ python3 scripts/agent.py init
 
 Claude Code liest CLAUDE.md und bietet `/og-linkedin-outreach`. Codex liest AGENTS.md und den Projekt-Skill `$og-linkedin-outreach`. Falls die Oberfläche keine Skill-Auswahl zeigt, genügt der obige Auftrag im geöffneten Projekt. Anleitungen: [Claude Code](docs/claude-code.md), [Codex](docs/codex.md), [Einrichtung](workflows/einrichtung.md).
 
-## Ablauf
+## Einzelne Skills direkt aufrufen
+
+Öffne dieses Repo in Claude Code oder Codex. Jeder folgende Aufruf lädt einen eigenen deutschen Fachskill mit vollständigem Ablauf. Claude Code nutzt `/`, Codex `$` vor demselben Namen. Die Installation von Browsern und Diensten ist weiterhin Teil der geführten Einrichtung.
+
+| Claude Code | Aufgabe |
+|---|---|
+| `/og-linkedin-setup` | Eigene Zielgruppe, Profil und Werkzeugzugänge einrichten. |
+| `/og-linkedin` | LinkedIn im Browser bedienen. |
+| `/og-linkedin-connect` | Personalisierte Vernetzungsanfragen. |
+| `/og-lead-borrow` | Passende Kontakte aus fremden Beiträgen. |
+| `/og-leadthunder` | Kommentarbasierte Kontaktkampagne im Browser. |
+| `/og-daily-icp-feed` | Täglicher Themenfeed mit Kommentarentwürfen. |
+| `/og-qualify-audience` | Reaktionen auf eigene Beiträge qualifizieren. |
+| `/og-content-reflect` | Eigene LinkedIn-Inhalte auswerten. |
+| `/og-content-compare` | Wettbewerber-Inhalte vergleichen. |
+| `/og-content-source` | Belegte Geschichten für LinkedIn recherchieren. |
+| `/og-linkedin-signal-monitor` | Relevante Unternehmenssignale finden. |
+| `/og-linkedin-autoresearch` | Ansprache mit kontrollierten Tests verbessern. |
+| `/og-linkedin-agent-teams` | Aufgaben auf Agenten und Termine verteilen. |
+| `/og-linkedin-apify-skills` | Apify-Recherche für Outreach nutzen. |
+| `/og-linkedin-deck` | Angebotspräsentation vorbereiten. |
+
+Die Skills liegen als echte `SKILL.md`-Ordner unter `.claude/skills/` und `.agents/skills/`. Du kannst sie unmittelbar im geklonten Projekt verwenden. Die bisherige allgemeine Einstiegsanweisung bleibt verfügbar.
+
+```sh
+# Projekt-Skills prüfen und für beide Laufzeiten synchronisieren
+python3 scripts/install_skills.py --runtime both
+
+# Optional: auch außerhalb des geöffneten Projekts verfügbar machen
+python3 scripts/install_skills.py --runtime both --scope global
+```
+
+Globale Skills bleiben an dieses lokale Repo und dessen eigenes Register gebunden. Bestehende globale Skills werden ohne `--replace` nicht überschrieben. Nach einem Umzug des Repo-Ordners erneut installieren. Nach der Installation eine neue Agentensitzung öffnen. [Installationsdetails](docs/skills-installation.md) · [Zuordnung der Fähigkeiten](docs/skill-umfang.md).
+
+## Ergänzende Ablaufdokumentation
 
 1. [Recherche](workflows/recherche.md)
 2. [Kontakte](workflows/kontakte.md)
