@@ -4,7 +4,17 @@ LinkedIn-Kontakte recherchieren, Kommentare und Vernetzungsanfragen vorbereiten,
 
 Ein deutsches Agentenpaket für **Claude Code und Codex** mit geführter Einrichtung, Arbeitsanleitungen und einem lokalen Kontaktregister. Du prüfst Empfänger und fertige Texte als Paket. Erst deine Freigabe startet die externe Ausführung.
 
-![Ablauf von der Recherche über deine Paketfreigabe bis zur Ausführung und Antwortbearbeitung.](docs/images/ablauf-doodle.png)
+![Ablauf von der Recherche über deine Paketfreigabe bis zur Ausführung und Antwortbearbeitung.](docs/images/prozessuebersicht.png)
+
+*Schematische Beispiele, keine mitgelieferte Dashboard-Oberfläche. Die Listen werden lokal gespeichert und als CSV ausgegeben.*
+
+| Schritt | Was der Agent macht | Geht etwas raus? |
+|---|---|---|
+| Recherche und Kontaktliste | Browser oder Websuche findet Personen. Profil-URL, Firma, Quelle und Kontaktstand werden gespeichert; vorhandene Kontakte werden erkannt. | Keine Kontaktaufnahme. |
+| Aktionsliste | Für jede Anfrage, Nachricht oder jeden Kommentar werden Person, konkretes Ziel und fertiger Text zusammengestellt. | Noch nichts. |
+| Paketfreigabe | Du prüfst Empfänger und Texte gemeinsam. Änderungen brauchen eine neue Freigabe. | Die Freigabe allein sendet noch nichts. |
+| Browserausführung | Der Agent reserviert einen Eintrag, öffnet das richtige LinkedIn-Ziel, führt genau die freigegebene Aktion aus und prüft das Ergebnis. | Jetzt geht die einzelne Anfrage, Nachricht oder der Kommentar raus. |
+| Rückmeldung | Ergebnis und Kontaktstand werden gespeichert. Antworten stoppen offene Folgeaktionen. Unklare Ergebnisse werden vor einem neuen Versuch abgeglichen. | Nachfassen braucht ein neues freigegebenes Paket. |
 
 ## Start
 
