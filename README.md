@@ -4,7 +4,7 @@ LinkedIn-Kontakte recherchieren, Kommentare und Vernetzungsanfragen vorbereiten,
 
 Ein deutsches Agentenpaket für **Claude Code und Codex** mit geführter Einrichtung, Arbeitsanleitungen und einem lokalen Kontaktregister. Du prüfst Empfänger und fertige Texte als Paket. Erst deine Freigabe startet die externe Ausführung.
 
-![Ablauf von der Recherche über deine Paketfreigabe bis zur Ausführung und Antwortbearbeitung.](docs/images/ablauf.png)
+![Ablauf von der Recherche über deine Paketfreigabe bis zur Ausführung und Antwortbearbeitung.](docs/images/ablauf-doodle.png)
 
 ## Start
 
@@ -33,10 +33,6 @@ Claude Code liest CLAUDE.md und bietet `/og-linkedin-outreach`. Codex liest AGEN
 [Werkzeuge und Einrichtung](docs/werkzeuge.md) erklären die benötigten Verbindungen. Anbieter lassen sich austauschen, sofern die benötigten Fähigkeiten tatsächlich vorhanden sind. Browser- und Versandaktionen führt die Agentenlaufzeit aus. Das lokale Python-Werkzeug hat keinen Netzwerkzugriff und sendet selbst nichts.
 
 ## Kontakte bleiben erhalten
-
-![Beispiel des Kontaktregisters: Stand lesen, Aufgabe bearbeiten und Ergebnis speichern.](docs/images/kontaktregister.png)
-
-*Schematische Darstellung mit fiktiven Daten. Die tatsächlichen Tabellen liegen als CSV-Dateien vor.*
 
 Jedes Repo führt sein eigenes Register unter data/. Nach jedem Schritt entstehen lesbare Tabellen kontakte.csv und aktionen.csv sowie ein Ereignisprotokoll. SQLite ist die maßgebliche Quelle. Ein Neustart liest diesen Stand. Persönliche Daten und Zugangsdaten gehören nicht ins öffentliche Repo. [Register](docs/register.md) · [Befehle](docs/befehle.md).
 
